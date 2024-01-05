@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login Page</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+body{
+    background-image: url(img/thumbnail.jpg);
+}
+</style>
+<body>
+    <div class="login-container">
+        <h2>Login:</h2>
+        <form id="signupForm">
+            <label for="newUsername">Nome:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Senha:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+        </form>
+        <a href="index.html"><input type="submit" value="Enviar"></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+</html>
+<script>
+function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Simples verificaÃ§Ã£o de login
+    if (username === "seuUsuario" && password === "suaSenha") {
+        alert("Login bem-sucedido!");
+    } else {
+        alert("Credenciais invalidas. Tente novamente.");
+    }
+}
+</script>
